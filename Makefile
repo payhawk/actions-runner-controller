@@ -215,9 +215,9 @@ docker-buildx:
 		--build-arg RUNNER_VERSION=${RUNNER_VERSION} \
 		--build-arg DOCKER_VERSION=${DOCKER_VERSION} \
 		--build-arg VERSION=${VERSION} \
-		-t "${DOCKER_IMAGE_NAME}:${VERSION}" \
+		-t "europe-west1-docker.pkg.dev/payhawk-206420/development/summerwind/actions-runner-controller:v0.27.5-payhawk-1" \
 		-f Dockerfile \
-		. ${PUSH_ARG}
+		. --push
 
 # Push the docker image
 docker-push:
